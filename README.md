@@ -1,5 +1,7 @@
 # Rusty blog
 
+![Rusty the blognkey](./docs/assets/225px-Rusty_the_donkey.jpg)
+
 **Rusty blog** is a blog engine aimed to help you create and host your own blog.
 
 ## Roadmap
