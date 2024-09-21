@@ -11,6 +11,7 @@ pub async fn blog_view(name: String) -> Template {
     let upload_dir = env::var("UPLOAD_DIR").expect("UPLOAD_DIR not set in .env");
     let file_dir = String::from(upload_dir) + name.as_str() + ".md";
 
+    println!("{}", file_dir);
     if !file_manager::file_exists(&file_dir) {
         return Template::render("404", context! {});
     }

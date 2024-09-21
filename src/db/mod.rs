@@ -43,7 +43,7 @@ pub async fn insert_user(
     .await
     {
         Ok(result) => {
-            return Some(
+            Some(
                 User { 
                     id: result.get("id"), 
                     name: result.get("name"), 
@@ -51,12 +51,10 @@ pub async fn insert_user(
                     password: result.get("password"), 
                     is_admin: result.get("is_admin") 
                 }
-            );
+            )
         },
         Err(err) => panic!("{}",err),
-    };
-
-    return None;
+    }
 }
 
 
